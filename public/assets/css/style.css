@@ -1,0 +1,323 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.btn-primary {
+  background-color: #6c5ce7;
+  border-color: #6c5ce7 !important;
+  border-radius: 50px;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn-primary:hover {
+  background-color: rgb(67.9090909091, 47.5454545455, 224.4545454545) !important;
+  transform: translateY(-2px);
+}
+
+.text-primary {
+  color: #6c5ce7 !important;
+}
+
+.badge-fine {
+  color: #ff4d4d;
+  display: inline-block;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.navbar .nav-link {
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: #6c5ce7 !important;
+}
+
+/* Main grid: Left 25%, Right 75% */
+main {
+  height: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 1rem;
+}
+
+/* Left side layout */
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side .img-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-side .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+}
+
+/* Right side: top 2:1:1, bottom 3 equal images */
+.right-side {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+/* Top right: Big image */
+.right-top.big {
+  grid-column: 1/2;
+  grid-row: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* Top right: Small images */
+.right-top.small:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end; /* Align to bottom */
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.right-top.small:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: end; /* Align to bottom */
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.right-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-top figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Bottom right: three equal images */
+.right-bottom:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.right-bottom:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.right-bottom:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.right-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-bottom figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.features-section {
+  background-color: #fff;
+  margin: 50px;
+}
+.features-section .icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+.features-section .bg-pink {
+  background-color: #e84393;
+}
+.features-section .bg-blue {
+  background-color: #0984e3;
+}
+.features-section .bg-purple {
+  background-color: #6c5ce7;
+}
+.features-section .bg-green {
+  background-color: #00b894;
+}
+.features-section .btn-outline-custom {
+  border: 2px solid #ced6e0;
+  color: #6c5ce7;
+  background: transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 10%;
+}
+.features-section .btn-outline-custom:hover {
+  border-color: #6c63ff;
+  color: #6c63ff;
+  background: rgba(108, 99, 255, 0.05);
+}
+
+.pricing-section {
+  background-color: #fcfcfc;
+}
+.pricing-section .highlight-monthly {
+  color: #6c5ce7;
+  font-weight: 800;
+}
+.pricing-section .highlight-monthly::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 245, 160, 0.6);
+  z-index: -1;
+  border-radius: 4px;
+}
+.pricing-section .icon-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.pricing-section .icon-box.bg-grey {
+  background-color: #dfe4ea;
+  color: #747d8c;
+}
+.pricing-section .icon-box.bg-orange {
+  background-color: #ffb142;
+}
+.pricing-section .icon-box.bg-teal {
+  background-color: #2ed573;
+}
+.pricing-section .scale-card {
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
+}
+@media (min-width: 992px) {
+  .pricing-section .scale-card {
+    transform: scale(1.05);
+  }
+}
+.pricing-section .btn-outline-secondary {
+  border-color: #d1d8e0;
+  color: #57606f;
+}
+.pricing-section .btn-outline-secondary:hover {
+  background-color: #f1f2f6;
+  color: #333333;
+}
+.pricing-section .bg-decoration {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(#6c63ff 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+footer {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  background-image: url("../images/Wave.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+}
+footer i {
+  font-size: 1.5rem;
+  color: #6c5ce7;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+footer i:hover {
+  color: rgb(47.2727272727, 28.3636363636, 192.6363636364);
+}
+footer .contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+  footer .contact-form {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
