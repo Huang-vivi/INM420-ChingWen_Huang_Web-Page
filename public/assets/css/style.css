@@ -12,10 +12,6 @@ body {
   font-weight: 600;
   transition: transform 0.2s;
 }
-.btn-primary:hover {
-  background-color: rgb(67.9090909091, 47.5454545455, 224.4545454545) !important;
-  transform: translateY(-2px);
-}
 
 .text-primary {
   color: #6c5ce7 !important;
