@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment</title>
+    <title>Assignment Web Page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,10 +18,11 @@
     <nav class="navbar navbar-expand-lg navbar-light py-4">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand fw-bold fs-3" href="#"><i class="bi bi-columns text-primary me-2 fs-3"></i>Grid</a>
+            <a class="navbar-brand fw-bold fs-3" href="#"><i class="bi bi-columns logo-color me-2 fs-3"></i>Grid</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- main nav -->
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav mx-auto">
                     <li><a class="nav-link px-3" href="#">How it works</a></li>
@@ -34,54 +38,57 @@
     <!-- HERO with css grid -->
     <main class="container my-5">
         <header class="text-center mb-5">
-            <h1 class="display-3 fw-bold">Combine <span class="badge-fine">fine</span> images</h1>
-            <h2 class="display-5">To represent a product</h2>
+            <h1>Combine <span class="badge-fine">fine</span> images</h1>
+            <h2>To represent a product</h2>
         </header>
-
-        <section class="hero-grid">
-            <!-- Left side -->
-            <section class="left-side">
-                <article class="d-flex flex-column h-100">
-                    <p class="mb-3">Use mixed grid with imagery, replace with your own photos and descriptions</p>
-                    <div class="img-container position-relative">
-                        <img src="assets/images/1.jpeg" alt="raccoon1">
-                        <div class="caption">
-                            <h3 class="h6 fw-bold mb-1">We aimed to deliver HQ templates for Figma</h3>
-                            <small class="text-white-50">Used by 123 people</small>
-                        </div>
+    <section class="hero-grid">
+        <aside class="left-side">
+            <article class="d-flex flex-column h-100">
+                <p class="mb-4 text-muted">Use mixed grid with imagery, replace with your own photos and descriptions</p>
+                <div class="img-container position-relative flex-grow-1 overflow-hidden rounded-4">
+                    <img src="assets/images/1.jpeg" alt="Abstract sphere">
+                    <div class="caption position-absolute bottom-0 start-0 p-4 text-white">
+                        <h3 class="h5 fw-bold mb-1">We aimed to deliver HQ templates for Figma</h3>
+                        <small class="opacity-75">Used by 123 people</small>
                     </div>
-                    <a href="#" class="btn btn-primary w-100 rounded-pill py-3 fw-bold fs-5 mt-3">Learn more</a>
-                </article>
-            </section>
+                </div>
+                <a href="#" class="btn btn-primary w-100 rounded-pill py-3 fw-bold mt-4">Learn more</a>
+            </article>
+        </aside>
 
-            <!-- Right side -->
-            <section class="right-side">
-                <!-- Top right: 2:1:1 -->
-                <figure class="right-top big">
-                    <img src="assets/images/2.jpeg" alt="raccoon2">
-                    <figcaption>Consider it done!</figcaption>
-                </figure>
-                <figure class="right-top small">
-                    <img src="assets/images/3.jpeg" alt="raccoon3">
-                </figure>
-                <figure class="right-top small">
-                    <img src="assets/images/4.jpeg" alt="raccoon4">
-                </figure>
+        <section class="right-side">
+            <figure class="grid-item item-man">
+                <img src="assets/images/2.jpeg" alt="Man pointing">
+                <figcaption>Consider it done!</figcaption>
+            </figure>
 
-                <!-- Bottom right: 3 equal images -->
-                <figure class="right-bottom">
-                    <img src="assets/images/5.jpeg" alt="raccoon5">
-                </figure>
-                <figure class="right-bottom">
-                    <img src="assets/images/6.jpeg" alt="raccoon6">
-                    <figcaption>See my goal?</figcaption>
-                </figure>
-                <figure class="right-bottom">
-                    <img src="assets/images/7.jpeg" alt="raccoon7">
-                </figure>
-            </section>
+            <div class="grid-item item-text">
+                <p>This is multipurpose grid, it fits for portfolio, services or agency web site</p>
+            </div>
+
+            <figure class="grid-item item-a">
+                <img src="assets/images/3.jpeg" alt="Letter A">
+            </figure>
+
+            <figure class="grid-item item-shoe">
+                <img src="assets/images/4.jpeg" alt="Nike Shoe">
+            </figure>
+
+            <figure class="grid-item item-book">
+                <img src="assets/images/5.jpeg" alt="Change by Design Book">
+            </figure>
+
+            <figure class="grid-item item-woman">
+                <img src="assets/images/6.jpeg" alt="Woman thinking">
+                <figcaption>See my goal?</figcaption>
+            </figure>
+
+            <figure class="grid-item item-window">
+                <img src="assets/images/7.jpeg" alt="Window architecture">
+            </figure>
         </section>
-    </main>
+    </section>
+</main>
 
     <!-- Delivering good designs -->
     <section class="features-section py-5">
@@ -99,8 +106,7 @@
                         <i class="bi bi-telephone-fill"></i>
                     </div>
                     <h4 class="fw-bold mb-3">Support</h4>
-                    <p class="text-secondary mb-4">Delivering faster and more personalized support with shared screens
-                        and cool design systems for Figma</p>
+                    <p class="text-secondary mb-4">Delivering faster and more personalized support with shared screens and cool design systems for Figma</p>
                     <a href="#" class="btn btn-outline-custom rounded-pill px-4">Learn more</a>
                 </div>
 
@@ -109,8 +115,7 @@
                         <i class="bi bi-pie-chart-fill"></i>
                     </div>
                     <h4 class="fw-bold mb-3">Sales growth</h4>
-                    <p class="text-secondary mb-4">Identify qualified customers with easy-to-use live chat messaging and
-                        AI-based Sales Bot</p>
+                    <p class="text-secondary mb-4">Identify qualified customers with easy-to-use live chat messaging and AI-based Sales Bot</p>
                     <a href="#" class="btn btn-outline-custom rounded-pill px-4">Learn more</a>
                 </div>
 
@@ -119,8 +124,7 @@
                         <i class="bi bi-lightning-fill"></i>
                     </div>
                     <h4 class="fw-bold mb-3">Coponents-driven</h4>
-                    <p class="text-secondary mb-4">Delivering faster and more personalized support with shared screens
-                        and cool design systems for Figma</p>
+                    <p class="text-secondary mb-4">Delivering faster and more personalized support with shared screens and cool design systems for Figma</p>
                     <a href="#" class="btn btn-outline-custom rounded-pill px-4">Learn more</a>
                 </div>
 
@@ -241,36 +245,84 @@
         </div>
     </section>
 
-    <footer class="text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h6>FOLLOW US</h6>
-                    <div class="d-flex gap-3 fs-3 mt-3">
-                        <i class="bi bi-facebook"></i><i class="bi bi-linkedin"></i>
+  <footer class="footer-section py-5 mt-5">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-5">
+                <div class="mb-5">
+                    <h6 class="text-uppercase text-muted fw-bold mb-4 ls-1">Follow us</h6>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="social-icon facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-slack"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <h6>INFORMATION</h6>
-                    <nav class="nav flex-column mt-3">
-                        <a href="#" class="nav-link text-white p-0">About Faster app</a>
-                        <a href="#" class="nav-link text-white p-0">Privacy Policy</a>
-                    </nav>
-                </div>
-                <div class="col-md-6 d-none d-md-block bg-light text-dark p-4 rounded-4">
-                    <h6>KEEP IN TOUCH</h6>
-                    <form class="row g-3">
-                        <div class="col-6"><input type="text" class="form-control" placeholder="Your name"></div>
-                        <div class="col-6"><input type="email" class="form-control" placeholder="E-mail"></div>
-                        <div class="col-12"><textarea class="form-control" placeholder="Leave your message"></textarea>
+
+                <div>
+                    <h6 class="text-uppercase text-muted fw-bold mb-4 ls-1">Information</h6>
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><a href="#" class="footer-link">About Faster app</a></li>
+                                <li><a href="#" class="footer-link">Get in Touch</a></li>
+                                <li><a href="#" class="footer-link">Things We Like</a></li>
+                            </ul>
                         </div>
-                        <div class="col-12"><button class="btn btn-primary w-100">SEND</button></div>
+                        <div class="col-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><a href="#" class="footer-link text-decoration-underline">Onhovered / Active</a></li>
+                                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                                <li><a href="#" class="footer-link">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                <li><a href="#" class="footer-link">We are hiring!</a></li>
+                                <li><a href="#" class="footer-link">Resources</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+                <div class="mb-4">
+                    <h6 class="text-uppercase text-muted fw-bold mb-2 ls-1">Follow us</h6>
+                    <a href="mailto:hello@fasterapp.com" class="mail-info fw-bold text-decoration-none">hello@fasterapp.com</a>
+                </div>
+
+                <div class="mb-3">
+                    <h6 class="text-uppercase text-muted fw-bold mb-4 ls-1">Keep in touch</h6>
+                    <form>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control form-control-lg custom-input ps-4" placeholder="Your name">
+                                    <i class="bi bi-person position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative">
+                                    <input type="email" class="form-control form-control-lg custom-input ps-4" placeholder="E-mail">
+                                    <i class="bi bi-envelope position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 h-100">
+                            <div class="position-relative flex-grow-1">
+                                <textarea class="form-control form-control-lg custom-textarea ps-4 py-3" rows="2" placeholder="Leave your message"></textarea>
+                                <i class="bi bi-pencil-square position-absolute top-0 end-0 mt-3 me-3 text-primary fs-5"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-4 fw-bold fs-5 rounded-3 d-flex align-items-center">SEND</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
 </body>
 
 </html>
