@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* Variables*/
+/* Variables */
 /* Grid Item Background Colors*/
 /* Main style */
 body {
@@ -26,6 +25,7 @@ img {
   display: block;
 }
 
+/* Components */
 .btn-primary {
   background-color: #6c5ce7;
   border-color: #6c5ce7 !important;
@@ -36,9 +36,10 @@ img {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Nav */
 .logo-color {
   color: #6c5ce7;
 }
@@ -47,6 +48,7 @@ img {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .navbar .navbar-brand {
   font-weight: 800;
@@ -60,6 +62,7 @@ img {
   color: #333333 !important;
 }
 
+/* Hero Grid Layout */
 .badge-fine {
   color: #d03a3a;
   display: inline-block;
@@ -68,6 +71,12 @@ img {
 main.container {
   position: relative;
   z-index: 1;
+  /* bg + transparent*/
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/Rectangle.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: lighten;
 }
 
 .hero-grid {
@@ -84,6 +93,7 @@ main.container {
   }
 }
 
+/* Left Sidebar */
 .left-side {
   height: 100%;
   padding-bottom: 60px;
@@ -100,7 +110,7 @@ main.container {
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .left-side .img-container img {
   position: absolute;
@@ -118,6 +128,7 @@ main.container {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
+/* Right Sidebar */
 .right-side {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -127,12 +138,12 @@ main.container {
 }
 @media (max-width: 992px) {
   .right-side {
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     height: auto;
   }
 }
 
+/* Grid Style */
 .grid-item {
   position: relative;
   border-radius: 1.5rem;
@@ -155,6 +166,7 @@ main.container {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Man */
 .item-man {
   grid-column: 1/span 2;
   grid-row: 1/span 2;
@@ -165,6 +177,7 @@ main.container {
   font-size: 3rem;
 }
 
+/* Text Box */
 .item-text {
   grid-column: 3/span 2;
   grid-row: 1;
@@ -182,6 +195,7 @@ main.container {
   margin: 0;
 }
 
+/* Letter A */
 .item-a {
   grid-column: 3;
   grid-row: 2;
@@ -192,6 +206,7 @@ main.container {
   transform: scale(0.8);
 }
 
+/* Shoe */
 .item-shoe {
   grid-column: 4;
   grid-row: 2;
@@ -202,6 +217,7 @@ main.container {
   transform: rotate(-15deg) scale(0.9);
 }
 
+/* Book */
 .item-book {
   grid-column: 1;
   grid-row: 3;
@@ -209,6 +225,7 @@ main.container {
   height: 70%;
 }
 
+/* Woman */
 .item-woman {
   grid-column: 2/span 2;
   grid-row: 3;
@@ -221,12 +238,14 @@ main.container {
   font-size: 4rem;
 }
 
+/* Window */
 .item-window {
   grid-column: 4;
   grid-row: 3;
   height: 50%;
 }
 
+/* RWD */
 @media (max-width: 992px) {
   .item-man,
   .item-text,
@@ -245,6 +264,7 @@ main.container {
     font-size: 3rem;
   }
 }
+/* Features Section */
 .features-section {
   padding: 5rem 0;
   background-color: #fff;
@@ -253,7 +273,7 @@ main.container {
 .features-section h2 {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #333;
+  color: #333333;
   margin-bottom: 1rem;
 }
 
@@ -264,6 +284,7 @@ main.container {
   line-height: 1.6;
 }
 
+/* Icon color */
 .features-section .icon-circle {
   width: 64px;
   height: 64px;
@@ -277,11 +298,7 @@ main.container {
   transition: transform 0.3s;
 }
 
-.features-section .col-lg-3:hover .icon-circle {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* 各種顏色定義 */
+/* Background Color Define */
 .bg-pink {
   background-color: #e84393;
 }
@@ -298,15 +315,26 @@ main.container {
   background-color: #00b894;
 }
 
-/* 小標題 */
+.bg-orange {
+  background-color: rgba(255, 219, 18, 0.8);
+}
+
+.bg-grey {
+  background-color: #d2d2d2;
+}
+
+.bg-teal {
+  background-color: #9effec;
+}
+
 .features-section h4 {
   font-weight: 800;
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #2d3436;
+  color: #333333;
 }
 
-/* 內文 */
+/* context */
 .features-section p {
   color: #333333;
   line-height: 1.6;
@@ -338,16 +366,26 @@ main.container {
 /*  Pricing Section */
 .pricing-section {
   padding: 5rem 0;
-  background-color: #fcfcfc;
 }
 
 .pricing-section h2.display-4 {
   font-weight: 900;
-  color: #2d3436;
+  color: #333333;
+}
+
+.icon-box {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .highlight-monthly {
-  color: #2d3436;
+  color: #333333;
   font-weight: 700;
   position: relative;
   z-index: 1;
@@ -360,7 +398,7 @@ main.container {
   left: -2px;
   width: 105%;
   height: 8px;
-  background-color: rgba(255, 245, 160, 0.8);
+  background-color: rgba(255, 219, 18, 0.8);
   z-index: -1;
   border-radius: 4px;
 }
@@ -440,7 +478,7 @@ main.container {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .footer-section h6 {
@@ -449,7 +487,7 @@ main.container {
   color: #b2bec3 !important;
 }
 
-/* --- Social Icons --- */
+/* Social Icons */
 .social-icon {
   font-size: 1.5rem;
   color: #6c5ce7;
@@ -473,7 +511,7 @@ main.container {
   opacity: 0.8;
 }
 
-/* --- Links --- */
+/*  Links  */
 .footer-link {
   color: #2d3436;
   text-decoration: none;
@@ -491,11 +529,11 @@ main.container {
   color: #6c5ce7;
 }
 
-/* --- Form Styles --- */
+/*  Form Styles  */
 .custom-input {
   background-color: #f1f2f6;
   border: none;
-  border-radius: 12px; /* 圓角 */
+  border-radius: 12px;
   height: 3.5rem;
   font-size: 1rem;
   color: #2d3436;
@@ -534,13 +572,22 @@ main.container {
   background-color: #6c5ce7;
   border: none;
   min-width: 120px;
-  height: 50px;
+  height: 60px;
   justify-content: center;
   align-items: center;
 }
 
 .footer-section .btn-primary:hover {
   background-color: #5f27cd;
+}
+
+.web-form {
+  display: none;
+}
+@media (min-width: 992px) {
+  .web-form {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

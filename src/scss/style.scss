@@ -1,8 +1,8 @@
-/* Variables*/
+/* Variables */
 $primary-purple: #6c5ce7;
 $secondary-yellow: #fff5a0;
 $dark-text: #333333;
-$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
 /* Grid Item Background Colors*/
 $bg-text-cream: #fff9e6;
@@ -36,7 +36,7 @@ img {
   display: block;
 }
 
-//  Components (Buttons, Badges, Nav)
+/* Components */
 .btn-primary {
   background-color: $primary-purple;
   border-color: $primary-purple !important;
@@ -49,11 +49,11 @@ img {
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba($primary-purple, 0.3);
+    box-shadow: $card-shadow;
   }
 }
 
-// Nav
+/* Nav */
 .logo-color {
   color: $primary-purple;
 }
@@ -62,6 +62,7 @@ img {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
   .navbar-brand {
     font-weight: 800;
@@ -76,7 +77,7 @@ img {
   }
 }
 
-// Hero Grid Layout (Bento Style)
+/* Hero Grid Layout */
 
 .badge-fine {
   color: #d03a3a;
@@ -84,10 +85,17 @@ img {
 }
 
 main.container {
-  position: relative; // For background decoration
+  position: relative;
   z-index: 1;
+  /* bg + transparent*/
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("../images/Rectangle.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: lighten;
 }
-
 
 .hero-grid {
   display: grid;
@@ -95,13 +103,14 @@ main.container {
   gap: 1.5rem;
   height: 100%;
   margin-bottom: 5rem;
+
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
     height: auto;
   }
 }
 
-// --- Left Sidebar ---
+/* Left Sidebar */
 .left-side {
   height: 100%;
   padding-bottom: 60px;
@@ -140,7 +149,7 @@ main.container {
   }
 }
 
-// --- Right Grid Content (The Bento Box) ---
+/* Right Sidebar */
 .right-side {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -149,13 +158,13 @@ main.container {
   height: 100%;
 
   @media (max-width: 992px) {
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: auto;
   }
 }
 
-// Grid Items Common Style
+/* Grid Style */
 .grid-item {
   position: relative;
   border-radius: 1.5rem;
@@ -180,9 +189,7 @@ main.container {
   }
 }
 
-// --- Individual Items Positioning & Styling ---
-
-// Man
+/* Man */
 .item-man {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
@@ -194,7 +201,7 @@ main.container {
   }
 }
 
-// Text Box
+/* Text Box */
 .item-text {
   grid-column: 3 / span 2;
   grid-row: 1;
@@ -213,7 +220,7 @@ main.container {
   }
 }
 
-// Letter A
+/* Letter A */
 .item-a {
   grid-column: 3;
   grid-row: 2;
@@ -225,7 +232,7 @@ main.container {
   }
 }
 
-// Shoe
+/* Shoe */
 .item-shoe {
   grid-column: 4;
   grid-row: 2;
@@ -237,7 +244,7 @@ main.container {
   }
 }
 
-//Book
+/* Book */
 .item-book {
   grid-column: 1;
   grid-row: 3;
@@ -245,7 +252,7 @@ main.container {
   height: 70%;
 }
 
-// Woman
+/* Woman */
 .item-woman {
   grid-column: 2 / span 2;
   grid-row: 3;
@@ -259,14 +266,14 @@ main.container {
   }
 }
 
-// Window
+/* Window */
 .item-window {
   grid-column: 4;
   grid-row: 3;
   height: 50%;
 }
 
-// Responsive Adjustments (Mobile)
+/* RWD */
 @media (max-width: 992px) {
   .item-man,
   .item-text,
@@ -279,7 +286,7 @@ main.container {
   .item-shoe,
   .item-book,
   .item-window {
-    grid-column: span 1; // 小圖佔一半
+    grid-column: span 1;
     min-height: 200px;
   }
 
@@ -288,8 +295,7 @@ main.container {
   }
 }
 
-// Features Section (Delivering good designs)
-
+/* Features Section */
 .features-section {
   padding: 5rem 0;
   background-color: #fff;
@@ -298,7 +304,7 @@ main.container {
 .features-section h2 {
   font-size: 2.5rem;
   font-weight: 900;
-  color: #333;
+  color: $dark-text;
   margin-bottom: 1rem;
 }
 
@@ -309,7 +315,7 @@ main.container {
   line-height: 1.6;
 }
 
-// Icon color
+/* Icon color */
 .features-section .icon-circle {
   width: 64px;
   height: 64px;
@@ -323,11 +329,8 @@ main.container {
   transition: transform 0.3s;
 }
 
-.features-section .col-lg-3:hover .icon-circle {
-  transform: scale(1.1) rotate(5deg);
-}
+/* Background Color Define */
 
-/* 各種顏色定義 */
 .bg-pink {
   background-color: #e84393;
 }
@@ -335,21 +338,32 @@ main.container {
   background-color: #0984e3;
 }
 .bg-purple {
-  background-color:$primary-purple;
+  background-color: $primary-purple;
 }
 .bg-green {
   background-color: #00b894;
 }
 
-/* 小標題 */
+.bg-orange {
+  background-color: #ffdb12cc;
+}
+
+.bg-grey {
+  background-color: #d2d2d2;
+}
+
+.bg-teal {
+  background-color: #9effec;
+}
+
 .features-section h4 {
   font-weight: 800;
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #2d3436;
+  color: $dark-text;
 }
 
-/* 內文 */
+/* context */
 .features-section p {
   color: $dark-text;
   line-height: 1.6;
@@ -371,7 +385,7 @@ main.container {
 }
 
 .btn-outline-custom:hover {
-  border-color:$primary-purple;
+  border-color: $primary-purple;
   background-color: $primary-purple;
   color: white;
   transform: translateY(-2px);
@@ -381,16 +395,26 @@ main.container {
 /*  Pricing Section */
 .pricing-section {
   padding: 5rem 0;
-  background-color: #fcfcfc;
 }
 
 .pricing-section h2.display-4 {
   font-weight: 900;
-  color: #2d3436;
+  color: $dark-text;
+}
+
+.icon-box {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .highlight-monthly {
-  color: #2d3436;
+  color: $dark-text;
   font-weight: 700;
   position: relative;
   z-index: 1;
@@ -403,7 +427,7 @@ main.container {
   left: -2px;
   width: 105%;
   height: 8px;
-  background-color: rgba(255, 245, 160, 0.8);
+  background-color: #ffdb12cc;
   z-index: -1;
   border-radius: 4px;
 }
@@ -481,7 +505,7 @@ main.container {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .footer-section h6 {
@@ -490,7 +514,7 @@ main.container {
   color: #b2bec3 !important;
 }
 
-/* --- Social Icons --- */
+/* Social Icons */
 .social-icon {
   font-size: 1.5rem;
   color: $primary-purple;
@@ -514,7 +538,7 @@ main.container {
   opacity: 0.8;
 }
 
-/* --- Links --- */
+/*  Links  */
 .footer-link {
   color: #2d3436;
   text-decoration: none;
@@ -527,17 +551,16 @@ main.container {
   color: $primary-purple;
 }
 
-.mail-info{
+.mail-info {
   font-size: 2rem;
   color: $primary-purple;
 }
 
-/* --- Form Styles --- */
-
+/*  Form Styles  */
 .custom-input {
   background-color: #f1f2f6;
   border: none;
-  border-radius: 12px; /* 圓角 */
+  border-radius: 12px;
   height: 3.5rem;
   font-size: 1rem;
   color: #2d3436;
@@ -550,11 +573,11 @@ main.container {
 
 /* form textarea */
 .custom-textarea {
-   background-color: #f1f2f6;
+  background-color: #f1f2f6;
   border: 2px solid transparent;
   border-radius: 12px;
   font-size: 1.1rem;
-  color:$primary-purple;
+  color: $primary-purple;
   resize: none;
   height: 100%;
   min-height: 80px;
@@ -576,7 +599,7 @@ main.container {
   background-color: $primary-purple;
   border: none;
   min-width: 120px;
-  height: 50px;
+  height: 60px;
   justify-content: center;
   align-items: center;
 }
@@ -584,3 +607,12 @@ main.container {
 .footer-section .btn-primary:hover {
   background-color: #5f27cd;
 }
+
+.web-form {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
